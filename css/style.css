@@ -1,0 +1,528 @@
+
+@import 'utilities.css';
+/* ------------------------------------------------------------ *\
+    01. Navbar
+\* ------------------------------------------------------------ */
+:root{
+	--primary:#3DCFD3;
+	--dark:#161616;
+	--pure:#FFFFFF;
+	--ternary:#898989;
+	--light:#F2F2F2;
+	--secondary:#070606;
+
+};
+
+*{      
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-webkit-font-smoothing:antialiased;
+}
+body{
+	margin:0;
+	font-family: sans-serif;
+}
+header{
+	background: var(--dark);
+	clip-path:polygon(0 0, 100% 0, 100% 100%, 70% 87%, 0 100%);
+	
+}
+.container{
+	max-width:1100px;
+	padding:0 15px;
+	margin:0 auto;
+}
+/*Responsive*/
+	@media (min-width: 576px){
+		.container{
+			max-width:540px;
+		}
+	}
+	@media (min-width: 768px){
+		.container{
+			max-width:720px;
+		}
+	}
+	@media (min-width: 992px){
+		.container{
+			max-width:960px;
+		}
+	}
+/*Responsive*/
+header nav .left a{
+	color:var(--pure);
+	text-decoration: none;
+	margin-right:2rem;
+	text-transform: uppercase;
+	transition: all .3s ease;
+}
+header nav .left a:hover{
+	color:var(--primary);
+}
+header nav .branding{
+	margin-right:3rem;
+}
+/* ------------------------------------------------------------ *\
+    02. hero
+\* ------------------------------------------------------------ */
+.hero{
+	padding:3rem 0;
+}
+.hero .left img{
+	height: 450px;
+   
+}
+.hero .right{
+	color:var(--pure); 
+}
+.hero .right h6{
+	font-size: 1.6rem;
+	color: var(--primary);
+	margin-bottom: 0.5rem;
+}
+.hero .right h1{
+	font-size: 4rem;
+	font-weight: 100;
+	line-height: 1.2;
+	margin-bottom: -1rem;
+}
+.hero .right h1 span{
+	color: var(--primary);
+	font-size: 2rem;
+}
+.hero .right p{
+	line-height: 1.9;
+	margin-bottom: 2rem;
+}
+
+.hero .right {
+	margin-top:-13rem;
+}
+
+/* ------------------------------------------------------------ *\
+    03. about section 
+\* ------------------------------------------------------------ */
+
+section{
+	padding: 6rem 0;
+}
+
+section.about .about-me-img{
+	    height: 300px;
+    width: 346px;
+}
+
+section.about h1{
+	margin-bottom: 1rem;
+	font-size:1.6rem;
+	font-weight: 400;
+}
+section.about h1 span{
+	color:var(--primary);
+}
+section.about h3{
+	font-size: 1rem;
+	margin-bottom: 1rem;
+	font-weight: 400;
+}
+section.about p{
+	font-family: sans-serif;
+	color: var(--ternary);
+	line-height: 1.9;
+	margin-bottom: 2rem;
+}
+
+section.about .social{ 
+	display: flex;
+}
+section.about .social a{ 
+	background: var(--dark);
+	display: flex;
+	align-items:center;
+	justify-content: center;
+	width:35px;
+	height: 35px;
+	border-radius: 50%;
+	margin-right: 0.6rem;
+	color:white;
+	text-decoration: none;
+	transition: all .3s ease;
+}
+section.about .social a i{
+	width: 100%;
+    height: 100%;
+    /* padding: 2.3rem; */
+    text-align: center;
+    line-height: 32px;
+}
+section.about .social a:hover{
+	background: var(--primary);
+	color:black;
+}
+
+/* ------------------------------------------------------------ *\
+    03. service section Grid
+\* ------------------------------------------------------------ */
+
+.section-heading{
+	color:var(--secondary);
+	text-align: center;
+	margin-bottom: 1rem;
+	line-height: 0.5;
+
+}
+.section-heading span{
+	color: var(--primary);
+}
+.section-heading + p{
+	color: var(--ternary);
+	font-family: sans-serif;
+	margin-bottom: 6rem;
+	text-align: center;
+}
+section.services{
+	background: var(--light); 
+}
+section.services .card-wrapper{
+	display: grid; 
+	grid-template-columns: repeat(3,1fr);
+	grid-column-gap:2rem;
+	grid-row-gap:5rem;
+}
+section.services .card-wrapper .card{
+	background: var(--pure);  
+	padding: 3rem 2rem;
+	position: relative;  
+	padding-top: 5rem;
+	text-align: center;
+	transition: all .3s ease;
+}
+section.services .card-wrapper .card img{
+	position: absolute;
+	top:-3.5rem;
+	left:50%;
+	transform: translate(-50%);
+	height: 122px;
+    width: 122px;
+}
+section.services .card-wrapper .card h2{
+	font-weight: 400;
+	font-size: 1.2rem;
+	margin-bottom: 0.5rem; 
+}
+section.services .card-wrapper .card p{
+	font-family: sans-serif;
+	color:var(--ternary);
+	line-height: 1.6;
+}
+section.services .card-wrapper .card:hover{
+	background: var(--dark);
+}
+section.services .card-wrapper .card:hover h2,section.services .card-wrapper .card:hover p{
+	color: var(--pure);
+}
+/* ------------------------------------------------------------ *\
+    03. freelancer section  
+\* ------------------------------------------------------------ */
+
+section.freelancer{
+	text-align: center;
+	background: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(../images/camera.png);
+	color: var(--pure);
+	clip-path:polygon(0 0, 100% 0, 100% 100%, 67% 80%, 0 100%);
+	padding-bottom: 14rem;
+}
+section.freelancer h1{
+	font-size:2rem;
+	margin-bottom: 0.5rem;
+}
+section.freelancer p{
+	 margin-bottom: 2rem;
+	 font-family: sans-serif;
+}
+ 
+/* ------------------------------------------------------------ *\
+    04. review section  Slick Slider
+\* ------------------------------------------------------------ */
+
+/* ------------------------------------------------------------ *\
+    05. work section 
+\* ------------------------------------------------------------ */
+section.work{
+	background: var(--light);
+}
+section.work .card-wrapper{
+	display: grid; 
+	grid-template-columns: repeat(3,1fr);
+	grid-gap:2rem; 
+
+}
+section.work .card-wrapper .card{
+	position: relative;
+}
+section.work .card-wrapper .card .overlay{
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height: 100%;
+	background:#00ffdcc7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	color:var(--light);
+	opacity:0;
+	}
+	section.work .card-wrapper .card:hover .overlay{
+		opacity:1;
+		transition: all .3s ease;  
+	}  
+	section.work .card-wrapper .card .overlay a{
+		color: var(--secondary);
+		text-decoration: none;
+	}
+	section.work .card-wrapper .card img{
+		width:100%; 
+		height:100%; 
+	}
+
+/* ------------------------------------------------------------ *\
+    06. blogsection 
+\* ------------------------------------------------------------ */
+	section.blog{
+		background: var(--dark); 
+		padding-bottom:12rem;
+		clip-path:polygon(0 0, 100% 0, 100% 100%, 67% 90%, 0 100%);
+	}
+	section.blog .section-heading{
+		color: var(--pure);
+	}
+	section.blog .card-wrapper{
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+		grid-gap:3rem;
+	}
+	section.blog .card-wrapper .card{
+		background: var(--pure);
+	}
+	section.blog .card-wrapper .card .img-wrapper img{
+		width:100%;
+		height:100%;
+		object-fit:cover;
+	}
+	section.blog .card-wrapper .card .card-content{
+		padding:1rem 2rem;
+	}
+	section.blog .card-wrapper .card .card-content h1{
+		font-size:1rem;
+		font-weight:600;
+	}
+	section.blog .card-wrapper .card .card-content a{
+		color:var(--secondary);
+		text-decoration: none;
+		font-weight: 600;
+	}
+	 
+	section.blog .card-wrapper .card .card-content p{
+		font-family: sans-serif;
+		margin-top: 1rem;
+		margin-bottom: 1rem;
+	}
+	section.blog .card-wrapper .card .card-content a.read-more{
+		font-size: 0.8rem; 
+	}
+	section.blog .card-wrapper .card .card-content a:hover{
+		color:var(--primary);
+	}
+
+/* ------------------------------------------------------------ *\
+    07. contact us section 
+\* ------------------------------------------------------------ */
+
+	section.contact .card-wrapper .card i{
+		font-size: 4rem; 
+	}
+	section.contact .card-wrapper{
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+		grid-gap: 3rem;
+	}
+	section.contact .card-wrapper .card{
+		text-align: center;
+
+	}
+	section.contact .card-wrapper .card i{
+		margin-bottom: 2rem;
+	}
+	section.contact .card-wrapper .card h1{
+		font-weight: 400;
+		margin-bottom: -1rem;
+	}
+	section.contact .card-wrapper .card h6{
+		font-size: 1rem;
+		color:var(--ternary);
+		font-weight: 400;
+	}
+
+	section.contact .input-wrap{
+		display: grid;
+		grid-template-columns: repeat(2,1fr);
+		grid-gap:2rem;
+		margin-bottom: 1rem;
+
+	}
+	section.contact .input-wrap-2{
+		display: flex;
+		flex-direction: column;
+	}
+	section.contact input{
+		padding: 0.5rem;
+		border:1px solid var(--light);
+		font-size: 0.8rem;
+	}
+	section.contact .input-wrap-2 input{
+		margin-bottom: 1rem;
+	}
+	section.contact .input-wrap-2 textarea{
+		padding: 0.5rem;
+		border:1px solid var(--light);
+	}
+	section.contact input,textarea:focus{
+		outline: none;
+	}
+	section.contact .btn-wrapper{
+		text-align: center; 
+		margin-top:2rem;
+	}
+
+/* ------------------------------------------------------------ *\
+    07.Footer 
+\* ------------------------------------------------------------ */
+footer{
+	background: var(--dark);
+	text-align: center;
+	padding: 5rem 0;
+}
+footer .footer-logo{
+	margin-bottom: 3rem;
+	width:180px;
+}
+footer .footer-socials a{
+	margin-right:1rem;
+	color:white;
+	font-size:1.2rem;
+}
+footer .footer-socials{
+	margin-bottom:2rem;
+}
+footer .copyrght{
+	color:var(--ternary);
+}
+
+/*responsive nav bar*/
+.site-main-wrapper{
+	position: relative;
+}
+.hamberger{
+	display: none; 
+	position: absolute;
+	top:40px;
+	right:40px;
+	z-index: 11;
+	border:none;
+	background:none;
+	outline: none;
+	cursor: pointer;
+}
+.hamberger img{
+	width: 30px;
+}
+.mobile-nav{
+	position: fixed;
+	top:0;
+	left:0;
+	z-index:1001;
+	background: var(--light);
+	width:100%;
+	height:100%;
+	padding: 2rem;
+	padding-top: 5rem; 
+	transform: translateX(-100%);/*hide mobile nav*/
+	transition:all .5s ease-in-out; 
+}
+.mobile-nav ul{
+	list-style-type:none;
+}
+.mobile-nav ul li a{
+	color: var(--secondary); 
+	text-decoration: none;
+	font-size:2rem;
+
+}
+.open{
+	transform:translateX(0);
+	-webkit-transform:translateX(0);
+	-moz-transform:translateX(0); 
+
+}
+.times{
+	position: fixed;
+	top:30px;
+	right:90px;
+	border:none;
+	background: none;
+	outline: none;
+	cursor:pointer;
+}
+.times img{
+	width:30px;
+}
+/* If screen size is more than 600px wide, set the font-size of <div> to 80px  for min-width*/ 
+/*responsive for mobile*/
+@media (max-width: 576px){/* If screen size is 576px wide, or less, set the font-size of <div> to 30px */
+	.hero{ 
+		flex-direction: column; 
+		background: red; 
+	}
+}
+/*responsive for tablet*/
+@media (max-width: 1024px) and (min-width: 576px){/* If screen size is 1024px wide, or less, set the font-size of <div> to 30px */
+	.hamberger{
+		display: block; 
+	}
+	header #main-nav{
+		display: none;
+	}
+	.hero .left img{
+		width: 260px;
+	}
+	.hero .right h1{
+		font-size: 3rem;
+	}
+	.hero{
+		padding-top: 10rem;
+	}
+	header{
+		clip-path:polygon(0 0, 100% 0, 100% 100%, 27% 89%,0 100%);
+	}
+	section.about .about-me-object{
+		height:360px;
+	}
+	section.about .right{
+		padding-left: 2rem;
+	}
+	section.services .card-wrapper {
+		grid-template-columns: repeat(2,1fr);
+	}
+	section.work .card-wrapper {
+    	grid-template-columns: repeat(2,1fr);
+	}
+	section.blog .card-wrapper {
+     	grid-template-columns: repeat(1,1fr);
+	}
+	section.blog {
+ 		clip-path: polygon(0 0, 100% 0, 100% 100%, 67% 95%, 0 100%);
+	}
+}
